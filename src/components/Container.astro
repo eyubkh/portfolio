@@ -1,0 +1,12 @@
+---
+type Props = {
+ id: string;
+ class?: string;
+}
+
+const { id } = Astro.props
+---
+
+<section id={id} class={`gap-2 max-w-screen-lg px-5 lg:px-0 mx-auto ${Astro.props.class}`}>
+ <slot />
+</section>

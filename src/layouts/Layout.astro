@@ -1,0 +1,40 @@
+---
+// Supports weights 100-900
+import '@fontsource-variable/onest';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Developer with 3 years of coding experince as a full stack." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Ayoub Khalfaoui Hadi - Web Developer and Entrepreneur</title>
+	</head>
+	<body>
+		<div class="relative h-full w-full bg-slate-950">
+			<div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div><div class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
+		</div>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+  color-scheme: dark;
+}
+	html,
+	body,
+	* {
+		font-family: 'Onest Variable',system-ui, sans-serif;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		width: 100vw;
+	}
+</style>
