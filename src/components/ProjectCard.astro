@@ -1,0 +1,59 @@
+---
+type Props = {
+ title: string;
+ year: string;
+ to?: string;
+ src: string;
+}
+const { title, year, to = '/#', src} = Astro.props
+---
+<article class={`
+ overflow-hidden 
+ 
+ bg-[rgba(120,119,198,0.1)]
+
+ w-fit
+ h-fit
+ m-0
+ rounded-3xl 
+ grid
+ grid-cols-1
+ grid-rows-2
+
+ lg:grid-cols-2
+ lg:grid-rows-1
+ lg:h-[350px]
+
+
+ group
+ transition-[transform,shadow]
+ ease-in-out 
+ duration-[250] 
+ hover:scale-[105%] 
+ hover:shadow-xl
+
+
+`}>
+ <div class="flex flex-col justify-center gap-2 p-12 ">
+  <h1 class="text-3xl font-bold capitalize">{title}</h1>
+  <h4 class="font-semibold text-md opacity-80">{year}</h4>
+  <slot />
+  <a href={to} class="w-fit bg-white dark:bg-black py-2 px-4 rounded-xl text-gray-800 capitalize">read more</a>
+ </div>
+  <div class=" relative w-full h-full">
+    <img class={`
+    rounded-xl
+    absolute 
+    bottom-0 
+    right-0 
+
+    transition-[transform]
+    translate-y-[10%] 
+    translate-x-[10%] 
+    group-hover:translate-y-[2%] 
+    group-hover:translate-x-[2%]
+    ease-in-out
+    duration-[250]
+    `} src={src} width="450"  alt=""> 
+  </div> 
+</article>

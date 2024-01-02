@@ -1,0 +1,32 @@
+<div id="bg" >
+</div>
+
+<style>
+ #bg { 
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  z-index: -1;
+  background-image: url('bg.svg');
+  background-position: center ;
+  background-size: 1000px;
+  background-repeat: no-repeat;
+
+  opacity: .5;
+
+
+  animation: scale both;
+  animation-timeline: scroll(block root);
+  animation-range: 0 300px;
+ }
+
+ @keyframes scale {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+ }
+
+
+
+</style>

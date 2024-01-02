@@ -1,6 +1,7 @@
 ---
 // Supports weights 100-900
 import '@fontsource-variable/onest';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -12,19 +13,18 @@ import '@fontsource-variable/onest';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Ayoub Khalfaoui Hadi - Web Developer and Entrepreneur</title>
+		<ViewTransitions />
 	</head>
 	<body>
-		<div class="relative h-full w-full bg-slate-950">
-			<div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div><div class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
-		</div>
+		<div class="absolute top-0 z-[-2] h-screen w-screen dark:bg-black light:bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 		<slot />
 	</body>
 </html>
 
 <style is:global>
-	:root {
-  color-scheme: dark;
-}
+		:root {
+			color-scheme: light;
+	}
 	html,
 	body,
 	* {
@@ -33,8 +33,10 @@ import '@fontsource-variable/onest';
 		margin: 0;
 		box-sizing: border-box;
 	}
-
-	body {
+	
+	html {
 		width: 100vw;
+		overflow-x: hidden;
+		scroll-behavior: smooth;
 	}
 </style>
