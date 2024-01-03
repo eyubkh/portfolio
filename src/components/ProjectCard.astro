@@ -1,4 +1,5 @@
 ---
+import ArrowIcon from '@assets/ArrowIcon.astro';
 type Props = {
  title: string;
  year: string;
@@ -12,35 +13,39 @@ const { title, year, to = '/#', src} = Astro.props
  
  bg-[rgba(120,119,198,0.1)]
 
- w-fit
+ w-full
  h-fit
- m-0
+ mb-12
  rounded-3xl 
  grid
  grid-cols-1
  grid-rows-2
 
- lg:grid-cols-2
- lg:grid-rows-1
- lg:h-[350px]
+ md:grid-cols-2
+ md:grid-rows-1
+ md:h-[350px]
 
 
  group
- transition-[transform,shadow]
+ transition-[transform,shadow,background]
  ease-in-out 
  duration-[250] 
- hover:scale-[105%] 
+ hover:scale-[101%] 
  hover:shadow-xl
+ hover:bg-[rgba(120,119,198,0.05)]
 
 
 `}>
- <div class="flex flex-col justify-center gap-2 p-12 ">
+ <div class="flex flex-col justify-center gap-2 p-6 lg:p-12 ">
   <h1 class="text-3xl font-bold capitalize">{title}</h1>
   <h4 class="font-semibold text-md opacity-80">{year}</h4>
   <slot />
-  <a href={to} class="w-fit bg-white dark:bg-black py-2 px-4 rounded-xl text-gray-800 capitalize">read more</a>
+  <a href={to} class="w-fit bg-white light:bg-black py-2 px-4 rounded-xl text-gray-800 capitalize flex gap-3 hover:gap-6 transition-[gap]">
+    <span>read more</span>
+    <ArrowIcon />
+  </a>
  </div>
-  <div class=" relative w-full h-full">
+  <div class=" relative min-w-[450px] min-h-[280px]">
     <img class={`
     rounded-xl
     absolute 

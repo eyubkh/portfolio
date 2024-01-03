@@ -1,0 +1,37 @@
+---
+type Props = {
+  to?: string;
+  class?: string;
+  external?: boolean;
+}
+const { to = "#", class: className, external = false} = Astro.props
+---
+
+<a href={to} class={`anchor capitalize ${className}`} target={external ? '_blank' : '_self'}>
+ <slot />
+</a>
+
+<style>
+ .anchor {
+  position: relative;
+  padding: 2px 4px;
+  cursor: pointer;
+ }
+
+ .anchor:after {
+  content: '';
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   height: 3px;
+   width: 0%;
+   background-color: #333;
+   opacity: .1;
+   border-radius: 2px;
+   transition: width 200ms ease  ;
+ }
+
+ .anchor:hover::after {
+  width: 100%;
+ }
+</style>

@@ -2,14 +2,31 @@
 import Button from './Button.astro';
 import GithubIcon from '@assets/GithubIcon.astro';
 import LinkedinIcon from '@assets/LinkedInIcon.astro';
+import SubAnchor from '@components/SubAchor.astro'
 ---
 
-<section id="hero" class="py-24 flex flex-col gap-5 text-center justify-center items-center">
+<section id="hero" class="py-32 flex flex-col gap-5 text-center justify-center items-center">
  <div class="flex flex-col gap-4 justify-center items-center">
   <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400">Available to work</span>
-  <h1 class="text-5xl font-semibold  bg-gradient-to-r from-[#333] to-[rgba(0,0,0,.6)] py-2 bg-clip-text text-transparent">Ayoub Khalfaoui Hadi</h1>
+  <h1 class={`
+   text-5xl 
+   font-semibold  
+   bg-gradient-to-r 
+   dark:from-white 
+   dark:to-[rgba(255,255,255,.6)] 
+   
+   from-[#333] 
+   to-[rgba(0,0,0,.6)] 
+
+   py-2 
+   bg-clip-text 
+   text-transparent
+  `}>Ayoub Khalfaoui Hadi
+ </h1>
  </div>
- <p class="max-w-[600px] text-pretty">Web Developer and Entrepanour with three years of coding experience.</p>
+ <p class="max-w-[600px] text-wrap">
+  Web Developer with +3 years of coding experience. Self-taught driven by passion for computer science. Learn more <SubAnchor to='/about'>about me</SubAnchor>
+ </p>
  <div class="flex gap-3">
   <Button text='@eyubkh' color='#0074B3' to="https://linkedin.com/in/eyubkh/" >
    <LinkedinIcon slot='icon' />

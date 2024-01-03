@@ -1,12 +1,12 @@
 ---
 type Props = {
- id: string;
+ id?: string;
  class?: string;
 }
 
-const { id } = Astro.props
+const { id, class: className } = Astro.props
 ---
 
-<section id={id} class={`gap-2 max-w-screen-lg px-5 lg:px-0 mx-auto ${Astro.props.class}`}>
+<section id={id} class={` w-full max-w-screen-lg px-6 lg:px-0 mx-auto ${className}`}>
  <slot />
 </section>

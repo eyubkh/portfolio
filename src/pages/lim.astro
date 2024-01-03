@@ -1,0 +1,55 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Anchor from "@components/Anchor.astro";
+import Container from "@components/Container.astro";
+import Footer from "@components/Footer.astro";
+import SectionBlog from "@components/SectionBlog.astro";
+import Title from "@components/Title.astro";
+
+---
+
+<Layout>
+ <Container>
+  <div class="overflow-hidden flex flex-col gap-4 items-center pt-12">
+   <img class=" rounded-xl"  src='/lim.png' width="450"  alt="">
+  </div>
+  <main class="max-w-[800px] mx-auto py-12">
+   <Title  text='lim'/>
+   <p class="text-wrap opacity-80">
+    Lim is a social networking platform that allows users to connect with each other and share content. With Lim, users can create and publish their own posts, customize their profile with a profile picture, and interact with other users by commenting on and liking their posts. Users can also search for and add new friends to their network, expanding their connections and access to shared content.
+   </p>
+ 
+   <SectionBlog src="/lim-1.png">
+    The user's avatar is hosted on Amazon S3, with the image buffer compressed for efficient space utilization. The updated image is then communicated to the database through GraphQL and stored in MongoDB.
+  </SectionBlog>
+  <SectionBlog src="/lim-2.png" reverse={true}>
+    Every word has audio to improve the listening, using the Web Speech API allow use to translate any word in any language.
+  </SectionBlog>
+  <SectionBlog src="/lim-3.png" >
+    When the user answers correctly, the internal score will increase, taking into account the difficulty of the exercises and ensuring a gradual progression in difficulty.
+  </SectionBlog>
+
+   <div class="flex flex-col gap-6 justify-center items-center mt-12">
+    <nav class="w-fit flex gap-4">
+      <Anchor to="https://lim-project.vercel.app" external={true}>web</Anchor> - 
+      <Anchor to="https://www.youtube.com/watch?v=WdJOcVGNUlM&feature=youtu.be" external={true}>demo</Anchor> - 
+      <Anchor to="https://github.com/eyubkh/Lim" external={true}>repo</Anchor>
+    </nav>
+    <div class="flex gap-2 flex-wrap justify-center">
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">React.js</span>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Apollo</span>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Next.js</span>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Jest</span>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Story Book</span>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">MongoDB</span>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">GraphQL</span>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Json Web Token</span>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Bycrypt</span>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Figma</span>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Husky</span>
+    </div>
+  </div>
+  </main>
+ </Container>
+ <Footer />
+</Layout>

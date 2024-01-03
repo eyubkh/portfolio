@@ -4,33 +4,47 @@ import Container from '@components/Container.astro'
 import Title from '@components/Title.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import SectionBlog from '@components/SectionBlog.astro';
+import Anchor from '@components/Anchor.astro';
 ---
 
 <Layout>
- <Container id=''>
-  <Header />
+ <Container>
    <div class="overflow-hidden flex flex-col gap-4 items-center pt-12">
     <img class=" rounded-xl"  src='/project-1.png' width="450"  alt="">
    </div>
-   <main class="w-[800px] mx-auto py-12">
+   <main class="max-w-[800px] mx-auto py-12">
     <Title  text='englicus'/>
-    <p class="text-wrap opacity-70">The platform is designed to help users learn and improve their English language skills. Through the use of engaging and educational games, Englicus provides a fun and effective way for individuals to practice their English language abilities. The website currently features a game called "Fill the Gaps", which challenges players to fill in the past tense form of a verb given the infinitive and participle. This game helps users improve their understanding of verb conjugation and expand their vocabulary. Whether you are a beginner learner or an advanced student.</p>
-    
-    <div class="flex gap-2 justify-center items-center mt-10">
-      <img class="shadow-lg" src="/1.png" width="300" alt="">
-      <p class="text-xl p-10">Starting with exercices dependnig on the goals of the user, Starting with exercices dependnig on the goals of the user, </p>
-    </div>
-    <div class="flex gap-2 justify-center items-center mt-10">
-      <p class="text-xl p-10">Starting with exercices dependnig on the goals of the user, Starting with exercices dependnig on the goals of the user, </p>
-      <img class="shadow-lg" src="/2.png" width="300" alt="">
-    </div>
-    <div class="flex gap-2 justify-center items-center mt-10">
-      <img class="shadow-lg" src="/3.png" width="300" alt="">
-      <p class="text-xl p-10">Starting with exercices dependnig on the goals of the user, Starting with exercices dependnig on the goals of the user, </p>
-    </div>
-    <div class="flex gap-2 justify-center items-center mt-10">
-      <p class="text-xl p-10">Starting with exercices dependnig on the goals of the user, Starting with exercices dependnig on the goals of the user, </p>
-      <img class="shadow-lg" src="/4.png" width="300" alt="">
+    <p class="text-wrap opacity-80">
+      The platform is designed to help users learn and improve their English language skills. Through the use of engaging and educational games, Englicus provides a fun and effective way for individuals to practice their English language abilities. The website currently features a game called "Fill the Gaps", which challenges players to fill in the past tense form of a verb given the infinitive and participle. This game helps users improve their understanding of verb conjugation and expand their vocabulary. Whether you are a beginner learner or an advanced student.
+    </p>
+    <SectionBlog src="/1.png">
+      The program starts with exercises that match the user's chosen goals. It begins at a simple level and gets more challenging as the user makes progress. The goal is to provide challenges that are just right—not too difficult to cause frustration, and not too easy to become boring.
+    </SectionBlog>
+    <SectionBlog src="/2.png" reverse={true}>
+      Every word has audio to improve the listening, using the Web Speech API allow use to translate any word in any language.
+    </SectionBlog>
+    <SectionBlog src="/3.png" >
+      When the user answers correctly, the internal score will increase, taking into account the difficulty of the exercises and ensuring a gradual progression in difficulty.
+    </SectionBlog>
+    <SectionBlog src="/4.png" reverse={true}>
+      If the user answers incorrectly, the correct word will be displayed, and that exercise will reappear at the end for another attempt. The internal score will decrease to adjust to the user's knowledge.
+    </SectionBlog>
+    <div class="flex flex-col gap-6 justify-center items-center mt-12">
+
+      <nav class="w-fit flex gap-4">
+        <Anchor>web</Anchor> - <Anchor>demo</Anchor> - <Anchor>repo</Anchor>
+      </nav>
+      <div class="flex gap-2 flex-wrap justify-center">
+        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">React.js</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">StoryBook</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Style Dictionary</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Jest</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Styled Components</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">NextJS</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Node.js</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Figma</span>
+      </div>
     </div>
    </main>
   </Container>

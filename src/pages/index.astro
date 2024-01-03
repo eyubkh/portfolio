@@ -11,16 +11,23 @@ import Background from '@components/Background.astro';
 <Layout>
 	<Background />
 	<Container id='home'>
-		<Header />
-		<Hero />
-		
+		<Hero />	
 	</Container>
-	<main id="projects" class="max-w-[1000px] mx-auto py-10">
-			<Title text='projects' />
-			<ProjectCard title='englicus' year='2023' to='/englicus' src="/project-1.png">
-				<p class="text-wrap max-w-md opacity-90">Englicus is an interactive platform with fun games to enhance English skills.</p>
-			</ProjectCard>
-		</main>
+
+	<Container id='projects' class="">
+		<Title text='projects' />
+		<ProjectCard title='englicus' year='2023' to='/englicus' src="/project-1.png">
+			<p class="text-wrap max-w-md opacity-90">
+				Englicus is an interactive platform with fun games to enhance English skills.
+			</p>
+		</ProjectCard>
+
+		<ProjectCard title='lim' year='2023' to='/lim' src="/lim.png">
+			<p class="text-wrap max-w-md opacity-90">
+				Connecting users through shared content, personalized profiles, and interactive features.
+			</p>
+		</ProjectCard>
+	</Container>
 
 	<Footer />
 </Layout>

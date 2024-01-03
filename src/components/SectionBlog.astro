@@ -1,0 +1,24 @@
+---
+type Props = {
+ src: string;
+ reverse?: boolean;
+}
+
+const { src, reverse = false } = Astro.props
+---
+
+<div class={` 
+flex 
+flex-col 
+md:flex-row 
+${reverse && 'md:flex-row-reverse'} 
+gap-2  
+justify-center 
+items-center 
+mt-10 
+`}>
+ <img class="shadow-lg rounded-xl" src={src} width="300" alt="Section blog image.">
+ <p class="p-10 text-wrap opacity-80">
+  <slot />
+ </p>
+</div>
