@@ -2,24 +2,27 @@
 import Layout from "@/layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import SubAchor from "@components/SubAchor.astro";
+import TextContainer from "@components/TextContainer.astro";
 import Title from "@components/Title.astro";
 
 ---
 
 <Layout>
  <Container>
-  <div class="w-full overflow-hidden grid place-content-center py-12">
-   <img class=" rounded-xl"  src="me.png" width="300" height="300" alt="">
+  <div class="w-full overflow-hidden grid place-content-center mt-12">
+   <img class=" rounded-xl"  src="/me.avif" width="300" height="300" alt="Image of Ayoub Khalfaoui Hadi">
   </div>
-  <Title text="I'm Ayoub Khalfaoui Hadi" />
-  <p>
-   I am a self-taught student with a goal of becoming a software engineer. My strong interest in computer science drives me to constantly improve my skills and knowledge through self-study and staying up-to-date on the latest technologies and programming languages. I am highly motivated and dedicated to achieving success in this field.
-  </p>
-  <p class="my-3">
-   Thank you for taking the time to review my portfolio. If you have any questions or would like to connect, you can reach me at <SubAchor  to="mailto:eyub.kh@gmail.com">eyub.kh@gmail.com</SubAchor>.
-  </p>
-  <Title text="about me" />
-  <p>I am living in the United Kingdom, but I was born in Spain and have family from Morocco , so I have a diverse cultural background. I've always felt that I don't really belong to any one specific place, and that's why I love traveling and learning about other cultures.</p>
-  <p class="my-3">I also enjoy staying active and do sport at the gym regularly. I find it not only keeps me physically fit, but it also helps me to clear my mind and reduce stress. In my free time, I also love being outside and spending time in nature.</p>
+  <TextContainer>
+   <Title text="I'm Ayoub Khalfaoui Hadi" />
+   <p>
+    I am a self-taught student with a goal of becoming a software engineer. My strong interest in computer science drives me to constantly improve my skills and knowledge through self-study and staying up-to-date on the latest technologies and programming languages. I am highly motivated and dedicated to achieving success in this field.
+   </p>
+   <p class="my-3">
+    Thank you for taking the time to review my portfolio. If you have any questions or would like to connect, you can reach me at <SubAchor  to="mailto:eyub.kh@gmail.com">eyub.kh@gmail.com</SubAchor>.
+   </p>
+   <Title text="about me" />
+   <p>I am living in the United Kingdom, but I was born in Spain and have family from Morocco , so I have a diverse cultural background. I've always felt that I don't really belong to any one specific place, and that's why I love traveling and learning about other cultures.</p>
+   <p class="my-3">I also enjoy staying active and do sport at the gym regularly. I find it not only keeps me physically fit, but it also helps me to clear my mind and reduce stress. In my free time, I also love being outside and spending time in nature.</p>
+  </TextContainer>
  </Container>
 </Layout>
