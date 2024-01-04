@@ -11,21 +11,20 @@ import Title from "@components/Title.astro";
 <Layout>
  <Container>
   <div class="overflow-hidden flex flex-col gap-4 items-center pt-12">
-   <img class=" rounded-xl"  src='/lim.png' width="450"  alt="">
+   <img class=" rounded-xl"  src='/lim.avif' width="450"  alt="">
   </div>
   <main class="max-w-[800px] mx-auto py-12">
    <Title  text='lim'/>
    <p class="text-wrap opacity-80">
     Lim is a social networking platform that allows users to connect with each other and share content. With Lim, users can create and publish their own posts, customize their profile with a profile picture, and interact with other users by commenting on and liking their posts. Users can also search for and add new friends to their network, expanding their connections and access to shared content.
    </p>
- 
-   <SectionBlog src="/lim-1.png">
+   <SectionBlog src="/lim-1.avif">
     The user's avatar is hosted on Amazon S3, with the image buffer compressed for efficient space utilization. The updated image is then communicated to the database through GraphQL and stored in MongoDB.
   </SectionBlog>
-  <SectionBlog src="/lim-2.png" reverse={true}>
+  <SectionBlog src="/lim-2.avif" reverse={true}>
     Every word has audio to improve the listening, using the Web Speech API allow use to translate any word in any language.
   </SectionBlog>
-  <SectionBlog src="/lim-3.png" >
+  <SectionBlog src="/lim-3.avif" >
     When the user answers correctly, the internal score will increase, taking into account the difficulty of the exercises and ensuring a gradual progression in difficulty.
   </SectionBlog>
 
@@ -51,5 +50,4 @@ import Title from "@components/Title.astro";
   </div>
   </main>
  </Container>
- <Footer />
 </Layout>

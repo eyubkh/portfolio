@@ -4,6 +4,7 @@ import Container from '@components/Container.astro';
 import Header from '@components/Header.astro';
 import '@fontsource-variable/onest';
 import { ViewTransitions } from 'astro:transitions';
+import Footer from '@components/Footer.astro';
 ---
 
 <!doctype html>
@@ -23,6 +24,7 @@ import { ViewTransitions } from 'astro:transitions';
 			<Header />
 		</Container>
 		<slot />
+		<Footer />
 	</body>
 </html>
 
