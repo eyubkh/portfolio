@@ -7,7 +7,7 @@ type Props = {
 const { to = "#", class: className, external = false} = Astro.props
 ---
 
-<a href={to} class={`anchor ${className}`} target={external ? '_blank' : '_self'} rel="noreferrer" aria-label={`redirection to an ${ external ? 'external' : 'internal'} link.`}>
+<a href={to} class={`anchor ${className}`} target={external ? '_blank' : '_self'} rel="noreferrer" aria-label={`redirection to ${to}.`}>
  <slot />
 </a>
 

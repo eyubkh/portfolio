@@ -10,7 +10,7 @@ const { to = "#", class: className, external = false} = Astro.props
 <a href={to} class={`anchor capitalize whitespace-nowrap ${className}`} 
   target={external ? '_blank' : '_self'} 
   rel="noreferrer"
-  aria-label={`redirection to an ${ external ? 'external' : 'internal'} link.`}
+  aria-label={`redirection to ${to}.`}
 >
  <slot />
 </a>
