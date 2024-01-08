@@ -3,16 +3,18 @@ import { info } from "@/info";
 import Layout from "@/layouts/Layout.astro";
 import Anchor from "@components/Anchor.astro";
 import Container from "@components/Container.astro";
-import Footer from "@components/Footer.astro";
 import SectionBlog from "@components/SectionBlog.astro";
 import Title from "@components/Title.astro";
 
 ---
 
-<Layout>
+<Layout
+  title="Lim - Ayoub Khalfaoui Hadi Project"
+  description="Lim is a social networking platform that allows users to connect with each other and share content. With Lim, users can create and publish their own posts, customize their profile with a profile picture, and interact with other users by commenting on and liking their posts. Users can also search for and add new friends to their network, expanding their connections and access to shared content."
+>
  <Container>
   <div class="overflow-hidden flex flex-col gap-4 items-center pt-12">
-   <img class=" rounded-xl"  src='/lim.avif' width="450" height="270" alt="">
+   <img class=" rounded-xl"  src='/lim.avif' width="450" height="270" alt="Lim image hero.">
   </div>
   <main class="max-w-[800px] mx-auto py-12">
    <Title  text='lim'/>

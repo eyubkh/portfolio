@@ -6,7 +6,7 @@ type Props = {
  to?: string;
  src: string;
 }
-const { title, year, to = '/#', src} = Astro.props
+const { title, year, to = '#', src} = Astro.props
 ---
 <article class={`
  overflow-hidden 
@@ -59,6 +59,6 @@ const { title, year, to = '/#', src} = Astro.props
     group-hover:translate-x-[2%]
     ease-in-out
     duration-[250]
-    `} src={src} width="450"  alt=""> 
+    `} src={src} width="450"  alt={`${title} image.`} loading="lazy"> 
   </div> 
 </article>
