@@ -3,14 +3,15 @@ type Props = {
   to?: string;
   class?: string;
   external?: boolean;
+  label: string;
 }
-const { to = "#", class: className, external = false} = Astro.props
+const { to = "#", class: className, external = false, label} = Astro.props
 ---
 
 <a href={to} class={`anchor capitalize whitespace-nowrap ${className}`} 
   target={external ? '_blank' : '_self'} 
   rel="noreferrer"
-  aria-label={`redirection to ${to}.`}
+  aria-label={label}
 >
  <slot />
 </a>
