@@ -1,13 +1,19 @@
 ---
 import GithubIcon from "@assets/GithubIcon.astro";
 import LinkedInIcon from "@assets/LinkedInIcon.astro";
+import IconAnchor from "./IconAnchor.astro";
+import { info } from "@/info";
 
 ---
 
 <footer class="w-full px-11 flex flex-col gap-6 py-20 bg-[#333] text-center">
  <div class="flex gap-4 justify-center">
-  <GithubIcon />
-  <LinkedInIcon />
+  <IconAnchor to={info.me.github}>
+   <GithubIcon />
+  </IconAnchor>
+  <IconAnchor to={info.me.linkedin}>
+   <LinkedInIcon />
+  </IconAnchor>
  </div>
  <p class="text-white">&copy; 2023 - Ayoub Khalfaoui Hadi</p>
 </footer>

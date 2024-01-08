@@ -7,7 +7,7 @@ type Props = {
 const { to = "#", class: className, external = false} = Astro.props
 ---
 
-<a href={to} class={`anchor capitalize ${className}`} target={external ? '_blank' : '_self'}>
+<a href={to} class={`anchor capitalize whitespace-nowrap ${className}`} target={external ? '_blank' : '_self'} rel="noreferrer">
  <slot />
 </a>
 
@@ -26,12 +26,18 @@ const { to = "#", class: className, external = false} = Astro.props
    height: 3px;
    width: 0%;
    background-color: #333;
-   opacity: .1;
+   opacity: .8;
    border-radius: 2px;
    transition: width 200ms ease  ;
  }
 
  .anchor:hover::after {
   width: 100%;
+ }
+
+ @media (prefers-color-scheme: dark) {
+  .anchor:after {
+    background-color: white;
+  }
  }
 </style>

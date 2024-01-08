@@ -1,4 +1,5 @@
 ---
+import { info } from '@/info';
 import Button from './Button.astro';
 import GithubIcon from '@assets/GithubIcon.astro';
 import LinkedinIcon from '@assets/LinkedInIcon.astro';
@@ -28,11 +29,11 @@ import SubAnchor from '@components/SubAchor.astro'
   Web Developer with +3 years of coding experience. Self-taught driven by passion for computer science. Learn more <SubAnchor to='/about'>about me</SubAnchor>
  </p>
  <div class="flex gap-3">
-  <Button text='@eyubkh' color='#0074B3' to="https://linkedin.com/in/eyubkh/" >
+  <Button text='@eyubkh' color='#0074B3' to={info.me.linkedin} >
    <LinkedinIcon slot='icon' />
   </Button>
 
-  <Button text='/eyubkh' color='#24292E' to="https://github.com/eyubkh" >
+  <Button text='/eyubkh' color='#24292E' to={info.me.github} >
    <GithubIcon slot='icon' />
   </Button>
  </div>
